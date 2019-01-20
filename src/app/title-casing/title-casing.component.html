@@ -2,6 +2,6 @@
   <p>
     Please enter your movie name to autoformat.
   </p>
-  <input type="text" [(ngModel)]="titleInput" (keyUp.enter)="onSubmit()">
+  <input type="text" [(ngModel)]="titleInput">
   <p>{{ titleInput | stopCase }}</p>
 </div>

@@ -15,16 +15,18 @@ export class textCasting implements PipeTransform {
             'the',
             'if',
             'was',
+            'is',
+            'not',
             'do'
         ]
         for (let i = 0; i < words.length; i++) {
-            const element = words[i];
-            stopWords.filter((current, index) => {
-                if (element == current) {
-                    return element
-                }
-            })
+            if (i > 0 && stopWords.includes(words[i])) {
+                words[i] = words[i].toLowerCase();
+            } else {
+                words[i] = words[i].substring(0, 1).toUpperCase() + words[i].substr(1).toLowerCase();
+            }
 
         }
+        return words.join(' ');
     };
 }

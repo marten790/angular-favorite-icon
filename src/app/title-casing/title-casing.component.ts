@@ -8,10 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class TitleCasingComponent implements OnInit {
   titleInput: string;
 
-  onSubmit() {
-    console.log(this.titleInput);
-  }
-
   constructor() { }
 
   ngOnInit() {
