@@ -10,7 +10,6 @@ export class FacoriteIcon implements OnInit {
 
   toggleStar() {
     this.favActive = !this.favActive;
-    console.log("toggle clicked", this.favActive);
   }
   constructor() {
   }
