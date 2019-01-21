@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'a list of examples for things you are learning!';
   isFavorite = true;
 
-  onFavoriteChanged() {
-    console.log('onFavoriteChanged has fired');
+  onFavoriteChanged(isFavoriteEvent) {
+    console.log('onFavoriteChanged has fired', isFavoriteEvent);
   }
 }

@@ -11,7 +11,8 @@ export class FacoriteIcon implements OnInit {
 
   toggleStar() {
     this.isSelected = !this.isSelected;
-    this.change.emit();
+    this.change.emit(this.isSelected);
+    console.log('this.change', this.change);
   }
   constructor() {
   }
