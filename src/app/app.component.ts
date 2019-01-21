@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'a list of examples for things you are learning!';
+  isFavorite = true;
+
+  onFavoriteChanged(isFavoriteEvent) {
+    console.log('onFavoriteChanged has fired', isFavoriteEvent);
+  }
 }
