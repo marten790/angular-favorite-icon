@@ -2,5 +2,7 @@
   <h1>
     Welcome to {{ title }} {{isFavorite}}
   </h1>
+
   <app-facorite-icon [isFavorite]="isFavorite" (change)="onFavoriteChanged($event)"></app-facorite-icon>
+  <util-title-casing></util-title-casing>
 </div>
