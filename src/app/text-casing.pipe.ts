@@ -10,6 +10,23 @@ export class textCasting implements PipeTransform {
             return null;
         }
         let words = value.split(' ');
+
+        for (let i = 0; i < words.length; i++) {
+            if (i > 0 && this.stopWordsFilter(words[i])) {
+                words[i] = words[i].toLowerCase();
+            } else {
+                words[i] = this.uppercaseFirstLetter(words[i]);
+            }
+
+        }
+        return words.join(' ');
+    };
+
+    private uppercaseFirstLetter(word: string): string {
+        return word.substring(0, 1).toUpperCase() + word.substr(1).toLowerCase();
+    }
+
+    private stopWordsFilter(word: string): boolean {
         let stopWords = [
             'to',
             'the',
@@ -19,14 +36,6 @@ export class textCasting implements PipeTransform {
             'not',
             'do'
         ]
-        for (let i = 0; i < words.length; i++) {
-            if (i > 0 && stopWords.includes(words[i])) {
-                words[i] = words[i].toLowerCase();
-            } else {
-                words[i] = words[i].substring(0, 1).toUpperCase() + words[i].substr(1).toLowerCase();
-            }
-
-        }
-        return words.join(' ');
-    };
+        return stopWords.includes(word.toLowerCase());
+    }
 }
