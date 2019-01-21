@@ -1,5 +1,4 @@
 <p>
   facorite-icon template works!
-  <i class="fa-star" [class.fas]="favActive" [class.far]="!favActive" (click)="toggleStar($event)"></i>
-
+  <i class="fa-star" [class.fas]="!isSelected" [class.far]="isSelected" (click)="toggleStar()"></i>
 </p>
