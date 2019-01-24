@@ -1,11 +1,10 @@
 <div style="text-align:center">
-  <h1>
-    <div>Welcome to: {{ title }}</div>
-    <div>The isFavorite value is: {{isFavorite}}</div>
-    <div>{{titleTwo}}</div>
-  </h1>
+  <h3>
+    <div>Is favorite icon active: {{ isFavoriteIconActive.newValue }}</div>
+    <div>Has second star been clicked? {{titleTwo}}</div>
+  </h3>
 
-  <app-facorite-icon [isFavorite]="isFavorite" (change)="onFavoriteChanged($event)"></app-facorite-icon>
-  <util-title-casing></util-title-casing>
-  <app-button-clicker (title-update-button)="theTitleWillUpdateOnClick($event)"></app-button-clicker>
+  <app-facorite-icon [isFavorite]="isFavorite" (onclick)="onFavoriteChanged($event)"></app-facorite-icon>
+  <!-- <util-title-casing></util-title-casing> -->
+  <app-button-clicker (notify)="theTitleWillUpdateOnClick($event)"></app-button-clicker>
 </div>

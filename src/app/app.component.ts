@@ -8,17 +8,16 @@ import { FavoriteChangedEventsArgs } from './facorite-icon/facorite-icon.compone
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = { newValue: false };
-  titleTwo = 'hello, this title will update on click of the second star below';
-  isFavorite = true;
+  isFavoriteIconActive = { newValue: false };
+  titleTwo = 'the second star has not been clicked';
 
   onFavoriteChanged(eventArgs: FavoriteChangedEventsArgs) {
-    console.log('onFavoriteChanged has fired', eventArgs);
-    this.title = eventArgs;
+    console.log('Favorite Icon: onFavoriteChanged has fired in app component');
+    this.isFavoriteIconActive = eventArgs;
   }
 
   theTitleWillUpdateOnClick(updatedTitle: string) {
-    console.log('this will be the updated title: ', updatedTitle);
+    console.log('Button clicker: theTitleWillUpdateOnClick fired in app component');
     this.titleTwo = updatedTitle;
   }
 }

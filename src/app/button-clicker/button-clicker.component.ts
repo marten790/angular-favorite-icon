@@ -7,12 +7,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ButtonClickerComponent implements OnInit {
 
-  @Output('title-update-button') notify: EventEmitter<string> = new EventEmitter<string>();
+  @Output('notify') notify: EventEmitter<string> = new EventEmitter<string>();
 
 
   hitThistoChangeString(): void {
-    console.log('this should change the text of the heading', this.notify);
-    this.notify.emit('this has been updated!');
+    console.log('Button clicker hitThistoChangeString fired');
+    this.notify.emit('Second star was clicked!');
   }
   constructor() { }
 
