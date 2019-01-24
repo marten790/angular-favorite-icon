@@ -1,8 +1,11 @@
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }} {{isFavorite}}
+    <div>Welcome to: {{ title }}</div>
+    <div>The isFavorite value is: {{isFavorite}}</div>
+    <div>{{titleTwo}}</div>
   </h1>
 
   <app-facorite-icon [isFavorite]="isFavorite" (change)="onFavoriteChanged($event)"></app-facorite-icon>
   <util-title-casing></util-title-casing>
+  <app-button-clicker (title-update-button)="theTitleWillUpdateOnClick($event)"></app-button-clicker>
 </div>

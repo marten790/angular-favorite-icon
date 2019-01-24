@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { FacoriteIcon } from './facorite-icon/facorite-icon.component';
 import { TitleCasingComponent } from './title-casing/title-casing.component';
 import { textCasting } from './text-casing.pipe';
+import { ButtonClickerComponent } from './button-clicker/button-clicker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FacoriteIcon,
     TitleCasingComponent,
-    textCasting
+    textCasting,
+    ButtonClickerComponent
   ],
   imports: [
     BrowserModule,
