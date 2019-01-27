@@ -1,0 +1,9 @@
+.heartIsActive{
+color:deeppink;
+}
+.heartIsInactive{
+color: #ccc;
+}
+i{
+    cursor: pointer;
+}

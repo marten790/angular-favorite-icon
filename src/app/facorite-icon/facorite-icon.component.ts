@@ -12,7 +12,6 @@ export class FacoriteIcon implements OnInit {
   @Output('onclick') onclick: EventEmitter<any> = new EventEmitter<any>();
 
   toggleStar(): void {
-
     this.isSelected = !this.isSelected;
     this.onclick.emit({ newValue: this.isSelected });
     console.log('toggleStar fired in Favorite icon component');
@@ -26,5 +25,5 @@ export class FacoriteIcon implements OnInit {
 
 }
 export interface FavoriteChangedEventsArgs {
-  newValue: boolean
+  newValue: boolean;
 }

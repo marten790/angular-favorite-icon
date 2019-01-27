@@ -8,6 +8,7 @@ import { TitleCasingComponent } from './title-casing/title-casing.component';
 import { textCasting } from './text-casing.pipe';
 import { ButtonClickerComponent } from './button-clicker/button-clicker.component';
 import { BootstrapComponentComponent } from './bootstrap-component/bootstrap-component.component';
+import { LikePostComponent } from './like-post/like-post.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BootstrapComponentComponent } from './bootstrap-component/bootstrap-com
     TitleCasingComponent,
     textCasting,
     ButtonClickerComponent,
-    BootstrapComponentComponent
+    BootstrapComponentComponent,
+    LikePostComponent
   ],
   imports: [
     BrowserModule,
