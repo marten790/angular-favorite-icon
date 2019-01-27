@@ -1,9 +1,10 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-button-clicker',
   templateUrl: './button-clicker.component.html',
-  styleUrls: ['./button-clicker.component.css']
+  styleUrls: ['./button-clicker.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class ButtonClickerComponent implements OnInit {
 
