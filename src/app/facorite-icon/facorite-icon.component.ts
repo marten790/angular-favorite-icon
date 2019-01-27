@@ -9,18 +9,22 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class FacoriteIcon implements OnInit {
 
   @Input('isFavorite') isSelected: boolean;
-  @Output() change = new EventEmitter();
+  @Output('onclick') onclick: EventEmitter<any> = new EventEmitter<any>();
 
-  toggleStar() {
+  toggleStar(): void {
 
     this.isSelected = !this.isSelected;
-    this.change.emit(this.isSelected);
-    console.log('this.change', this.change);
+    this.onclick.emit({ newValue: this.isSelected });
+    console.log('toggleStar fired in Favorite icon component');
   }
+
   constructor() {
   }
 
   ngOnInit() {
   }
 
+}
+export interface FavoriteChangedEventsArgs {
+  newValue: boolean
 }

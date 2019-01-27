@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FavoriteChangedEventsArgs } from './facorite-icon/facorite-icon.component';
+
 
 @Component({
   selector: 'app-root',
@@ -6,10 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'a list of examples for things you are learning!';
-  isFavorite = true;
+  isFavoriteIconActive = { newValue: false };
+  titleTwo = 'the second star has not been clicked';
 
-  onFavoriteChanged(isFavoriteEvent) {
-    console.log('onFavoriteChanged has fired', isFavoriteEvent);
+  onFavoriteChanged(eventArgs: FavoriteChangedEventsArgs) {
+    console.log('Favorite Icon: onFavoriteChanged has fired in app component');
+    this.isFavoriteIconActive = eventArgs;
+  }
+
+  theTitleWillUpdateOnClick(updatedTitle: string) {
+    console.log('Button clicker: theTitleWillUpdateOnClick fired in app component');
+    this.titleTwo = updatedTitle;
   }
 }
